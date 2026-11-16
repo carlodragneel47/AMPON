@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ampon | Rescued Pet Adoption in Santa Maria, Bulacan</title>
+  <meta name="description" content="Adopt a rescued dog or cat in Santa Maria, Bulacan. Answer a few questions and our rule based matching recommends pets that fit your home and lifestyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/home.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Rescued in Santa Maria, Bulacan</span>
+          <h1>Find the rescued pet that <span class="text-grad">fits your life.</span></h1>
+          <p class="lead">Tell us about your home and daily routine. Our rule based matching recommends dogs and cats that suit you, and explains every recommendation.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/match"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg>Find my match</a>
+            <a class="btn btn-soft btn-lg" href="/pets"><svg class="icon"><use href="/img/icons.svg#i-paw-print"></use></svg>Browse pets</a>
+          </div>
+          <div class="hero-stats" id="stats">
+            <div class="hero-stat"><b data-k="available">0</b><span>Ready for adoption</span></div>
+            <div class="hero-stat"><b data-k="inCare">0</b><span>In rescue care</span></div>
+            <div class="hero-stat"><b data-k="adopted">0</b><span>Happy adoptions</span></div>
+          </div>
+        </div>
+        <div class="collage" aria-hidden="true">
+          <div class="collage-main"><img src="/img/site/running.jpg" alt="" fetchpriority="high"></div>
+          <div class="float float-chart">
+            <div class="row-between"><span class="t">Adoption interest, 7 days</span></div>
+            <span class="v"><svg class="icon"><use href="/img/icons.svg#i-activity"></use></svg>Growing</span>
+            <svg viewBox="0 0 180 48" width="180" height="48">
+              <defs><linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="#36a5ff"/><stop offset="1" stop-color="#3b5bff"/></linearGradient></defs>
+              <path d="M2 34 C 20 10, 32 40, 50 26 S 80 8, 96 28 S 126 40, 140 20 S 165 4, 178 12" fill="none" stroke="url(#hl)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="140" cy="20" r="5" fill="#fff" stroke="#3b5bff" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="float float-score">
+            <div class="ring sm excellent" style="--v:92"><b>92<small>%</small></b></div>
+            <div><b>Excellent match</b><span>Based on 8 matching rules</span></div>
+          </div>
+          <div class="float float-check">
+            <span class="ico ico-sm ico-success"><svg class="icon"><use href="/img/icons.svg#i-shield-check"></use></svg></span>
+            Vaccinated and vet checked
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Simple process</span><h2>How adoption works</h2><p>A guided and transparent process, from browsing to bringing your new companion home.</p></div></div>
+        <div class="steps">
+          <div class="card step"><span class="ico ico-grad"><svg class="icon"><use href="/img/icons.svg#i-clipboard-list"></use></svg></span><span class="n">Step 1</span><h3>Tell us about you</h3><p>Your home, schedule, activity level, household and experience with pets.</p></div>
+          <div class="card step"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg></span><span class="n">Step 2</span><h3>Get matched</h3><p>Predefined IF THEN rules score every available pet and explain each result.</p></div>
+          <div class="card step"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-send"></use></svg></span><span class="n">Step 3</span><h3>Apply online</h3><p>Send an adoption application in minutes and follow its progress in your account.</p></div>
+          <div class="card step"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-heart-handshake"></use></svg></span><span class="n">Step 4</span><h3>Meet and go home</h3><p>The shelter reviews your application, schedules a meet up and approves the adoption.</p></div>
+        </div>
+        <div class="step-line" aria-hidden="true"><b></b><i></i><b></b><i></i><b></b><i></i><b></b></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Available now</span><h2>Waiting for a home</h2><p>Healthy, vaccinated and ready to meet you.</p></div>
+          <a class="btn btn-soft" href="/pets">See all pets<svg class="icon"><use href="/img/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+        <div class="grid grid-3" id="featured" aria-busy="true"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="container grid grid-2">
+        <div class="card feature">
+          <img src="/img/site/cat-portrait.jpg" alt="A tabby cat looking up" loading="lazy">
+          <div class="txt">
+            <span class="eyebrow">Transparent matching</span>
+            <h2>No black box.</h2>
+            <p>Every recommendation comes from rules you can read. Each match shows which rules applied and how they changed the score.</p>
+            <div class="feature-demo">
+              <ul class="reasons" style="margin:0">
+                <li class="plus"><span class="pts">+20</span><span>Energy level matches your lifestyle</span></li>
+                <li class="plus"><span class="pts">+15</span><span>Good with children</span></li>
+                <li class="minus"><span class="pts">−5</span><span>Not your preferred size</span></li>
+              </ul>
+            </div>
+            <a class="btn btn-primary" href="/rules">See all the rules</a>
+          </div>
+        </div>
+        <div class="card feature">
+          <img src="/img/site/sunset-puppy.jpg" alt="A puppy running outdoors" loading="lazy">
+          <div class="txt">
+            <span class="eyebrow">Rescue and rehabilitation</span>
+            <h2>Cared for before adoption.</h2>
+            <p>Shelter staff track health, vaccinations and rehabilitation. A pet is only listed once it passes every readiness rule.</p>
+            <div class="feature-demo">
+              <div class="small strong" style="margin-bottom:10px">Rehabilitation progress</div>
+              <div class="progress"><div class="progress-track"><div class="progress-fill" style="width:80%"></div></div><span class="progress-val">80%</span></div>
+            </div>
+            <a class="btn btn-soft" href="/care">Meet the animals in care</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:16px">
+      <div class="cta-band">
+        <div><h2>Ready to meet your new best friend?</h2><p>Create a free account to save your answers and apply online.</p></div>
+        <a class="btn btn-soft btn-lg" href="/register">Create an account<svg class="icon"><use href="/img/icons.svg#i-arrow-right"></use></svg></a>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

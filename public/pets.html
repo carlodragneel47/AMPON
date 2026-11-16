@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adopt a Pet | Ampon</title>
+  <meta name="description" content="Browse rescued dogs and cats that are healthy, vaccinated and ready for adoption in Santa Maria, Bulacan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/pets.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/pets.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="page-head row-between">
+      <div><span class="eyebrow">Adopt</span><h1>Adopt a pet</h1><p>Every pet listed here has passed the shelter health and readiness checks.</p></div>
+      <a class="btn btn-primary" href="/match"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg>Get personalised matches</a>
+    </div>
+    <div class="browse section-sm">
+      <form class="card card-pad filters" id="filters" role="search" aria-label="Filter pets">
+        <h3><span class="ico ico-sm"><svg class="icon"><use href="/img/icons.svg#i-sliders-horizontal"></use></svg></span>Filters</h3>
+        <div class="field"><label for="q">Search</label>
+          <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-search"></use></svg><input type="search" id="q" name="q" placeholder="Name, breed or trait"></div></div>
+        <div class="field"><span class="label" id="species-label">Species</span>
+          <div class="segmented block" role="radiogroup" aria-labelledby="species-label">
+            <label><input type="radio" name="species" value="any" checked><span>All</span></label>
+            <label><input type="radio" name="species" value="dog"><span>Dogs</span></label>
+            <label><input type="radio" name="species" value="cat"><span>Cats</span></label>
+          </div></div>
+        <div class="field"><label for="size">Size</label><select id="size" name="size"><option value="any">Any size</option><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option></select></div>
+        <div class="field"><label for="age">Age</label><select id="age" name="age"><option value="any">Any age</option><option value="young">Young (under 1 year)</option><option value="adult">Adult</option><option value="senior">Senior</option></select></div>
+        <div class="field"><label for="sex">Sex</label><select id="sex" name="sex"><option value="any">Any</option><option value="male">Male</option><option value="female">Female</option></select></div>
+        <div class="field"><label class="switch"><input type="checkbox" name="kids" value="yes"><span class="track"></span>Good with children</label></div>
+        <div class="field"><button type="reset" class="btn btn-soft btn-sm btn-block"><svg class="icon"><use href="/img/icons.svg#i-refresh-cw"></use></svg>Reset filters</button></div>
+      </form>
+      <section aria-labelledby="count">
+        <div class="results-bar">
+          <p id="count" aria-live="polite">Loading pets</p>
+          <button type="button" class="btn btn-soft btn-sm filter-toggle" aria-controls="filters" aria-expanded="false"><svg class="icon"><use href="/img/icons.svg#i-sliders-horizontal"></use></svg>Filters</button>
+        </div>
+        <div class="grid grid-auto" id="results"></div>
+      </section>
+    </div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pets and Care | Ampon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/portal.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/admin/pets.js"></script>
+</head>
+<body class="portal">
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation"></aside>
+    <div class="shell-overlay"></div>
+    <div class="workspace">
+      <header class="topbar" id="topbar"></header>
+      <main class="content" id="content">
+        <div class="toolbar">
+          <div class="segmented" role="radiogroup" aria-label="Filter by status" id="status-filter">
+            <label><input type="radio" name="st" value="all" checked><span>All</span></label>
+            <label><input type="radio" name="st" value="rescued"><span>Rescued</span></label>
+            <label><input type="radio" name="st" value="rehabilitation"><span>In rehab</span></label>
+            <label><input type="radio" name="st" value="available"><span>Available</span></label>
+            <label><input type="radio" name="st" value="adopted"><span>Adopted</span></label>
+          </div>
+          <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-search"></use></svg><input type="search" id="q" placeholder="Search name or breed" aria-label="Search pets"></div>
+        </div>
+        <section class="card card-pad">
+          <div class="table-wrap" id="pets-table"><div class="spinner"></div></div>
+        </section>
+      </main>
+      <footer class="portal-foot"></footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create an Account | Ampon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/auth.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/register.js"></script>
+</head>
+<body class="auth">
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="auth-card">
+      <div class="auth-visual">
+        <img src="/img/site/high-five.jpg" alt="">
+        <div>
+          <h2>Give a rescued pet a second chance</h2>
+          <p>Create a free adopter account in less than a minute.</p>
+          <ul>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-circle-check"></use></svg></span>Save your match questionnaire answers</li>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-star"></use></svg></span>See a compatibility score on every pet</li>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-send"></use></svg></span>Apply online and track your status</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-form">
+        <h1>Create an account</h1>
+        <p class="sub">Save your answers, apply for pets and track your applications.</p>
+        <div id="err" aria-live="assertive"></div>
+        <form id="form" class="stack" novalidate>
+          <div class="field"><label for="name">Full name</label>
+            <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-user"></use></svg><input type="text" id="name" name="name" required maxlength="120" autocomplete="name" placeholder="Juan Dela Cruz"></div></div>
+          <div class="field"><label for="email">Email address</label>
+            <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-mail"></use></svg><input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com"></div></div>
+          <div class="form-grid">
+            <div class="field"><label for="phone">Mobile number <span class="faint">(optional)</span></label>
+              <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-phone"></use></svg><input type="tel" id="phone" name="phone" maxlength="40" autocomplete="tel" placeholder="09XX XXX XXXX"></div></div>
+            <div class="field"><label for="address">Barangay <span class="faint">(optional)</span></label>
+              <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-map-pin"></use></svg><input type="text" id="address" name="address" maxlength="255" autocomplete="street-address" placeholder="Santa Maria, Bulacan"></div></div>
+          </div>
+          <div class="field"><label for="password">Password</label>
+            <div class="input-wrap has-action"><svg class="icon"><use href="/img/icons.svg#i-lock"></use></svg><input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" placeholder="At least 6 characters">
+              <button type="button" class="input-action" data-toggle-pw aria-label="Show password" aria-controls="password"><svg class="icon"><use href="/img/icons.svg#i-eye"></use></svg></button></div></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit">Create account<svg class="icon"><use href="/img/icons.svg#i-arrow-right"></use></svg></button>
+        </form>
+        <p class="auth-alt">Already have an account? <a href="/login" id="alt-link">Log in</a></p>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Applications | Ampon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/portal.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/admin/applications.js"></script>
+</head>
+<body class="portal">
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation"></aside>
+    <div class="shell-overlay"></div>
+    <div class="workspace">
+      <header class="topbar" id="topbar"></header>
+      <main class="content" id="content">
+        <div class="toolbar">
+          <div class="segmented" role="radiogroup" aria-label="Filter by status" id="status-filter">
+            <label><input type="radio" name="st" value="pending" checked><span>Pending</span></label>
+            <label><input type="radio" name="st" value="approved"><span>Approved</span></label>
+            <label><input type="radio" name="st" value="rejected"><span>Not approved</span></label>
+            <label><input type="radio" name="st" value="withdrawn"><span>Withdrawn</span></label>
+            <label><input type="radio" name="st" value="all"><span>All</span></label>
+          </div>
+          <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-search"></use></svg><input type="search" id="q" placeholder="Search applicant or pet" aria-label="Search applications"></div>
+        </div>
+        <section class="card card-pad">
+          <div class="table-wrap" id="apps-table"><div class="spinner"></div></div>
+        </section>
+      </main>
+      <footer class="portal-foot"></footer>
+    </div>
+  </div>
+</body>
+</html>

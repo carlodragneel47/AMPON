@@ -1,0 +1,23 @@
+{
+  "name": "ampon-pet-adoption",
+  "version": "1.0.0",
+  "description": "Web-Based Pet Adoption System with Rule-Based Matching",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --watch --env-file-if-exists=.env server.js",
+    "reset-data": "node --env-file-if-exists=.env src/reset.js",
+    "upgrade-data": "node --env-file-if-exists=.env src/upgrade-data.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.12.0"
+  }
+}

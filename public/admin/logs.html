@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System Logs | Ampon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/portal.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/admin/logs.js"></script>
+</head>
+<body class="portal">
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation"></aside>
+    <div class="shell-overlay"></div>
+    <div class="workspace">
+      <header class="topbar" id="topbar"></header>
+      <main class="content" id="content">
+        <div class="alert alert-info" style="margin-bottom:20px"><svg class="icon"><use href="/img/icons.svg#i-info"></use></svg><div>System logs capture objective usage data such as log ins, registrations, profile views, searches, matching runs, applications and administrative actions. They are used to evaluate the system.</div></div>
+        <div class="toolbar">
+          <div class="row">
+            <select id="action" aria-label="Filter by action"><option value="all">All actions</option></select>
+            <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-search"></use></svg><input type="search" id="q" placeholder="Search user or details" aria-label="Search logs"></div>
+          </div>
+        </div>
+        <section class="card card-pad">
+          <div class="table-wrap" id="logs-table"><div class="spinner"></div></div>
+          <div class="pager" id="pager"></div>
+        </section>
+      </main>
+      <footer class="portal-foot"></footer>
+    </div>
+  </div>
+</body>
+</html>

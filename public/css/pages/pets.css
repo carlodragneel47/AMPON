@@ -1,0 +1,32 @@
+/* Browse pets, pet profile and rescue care pages */
+.browse { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 30px; align-items: start; }
+.filters { position: sticky; top: 110px; }
+.filters h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.filters .field + .field { margin-top: 18px; }
+.results-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; min-height: 40px; }
+.results-bar p { margin: 0; font-weight: 600; color: var(--ink-2); }
+.filter-toggle { display: none; }
+@media (max-width: 920px) {
+  .browse { grid-template-columns: 1fr; }
+  .filters { position: static; display: none; }
+  .filters.open { display: block; }
+  .filter-toggle { display: inline-flex; }
+}
+
+/* profile */
+.profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 34px; align-items: start; }
+.profile-media { position: sticky; top: 110px; }
+.profile-photo { padding: 14px; border-radius: 32px; background: var(--surface); box-shadow: var(--neu-lg); }
+.profile-photo .pet-media { aspect-ratio: 1 / 1; border-radius: 22px; }
+.profile-title h1 { font-size: clamp(2.1rem, 4.4vw, 3rem); margin-bottom: 6px; }
+.profile-title .sub { display: flex; flex-wrap: wrap; gap: 8px 16px; color: var(--muted); font-size: .92rem; font-weight: 500; }
+.profile-title .sub span { display: inline-flex; align-items: center; gap: 6px; }
+.compat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.compat > div { display: grid; justify-items: center; gap: 8px; padding: 18px 10px; border-radius: 20px; background: var(--surface); box-shadow: var(--neu-sm); text-align: center; font-size: .82rem; font-weight: 600; color: var(--muted); }
+.compat b { font-size: .86rem; color: var(--ink); }
+.compat .yes .ico { color: var(--success); }
+.compat .no .ico { color: var(--danger); }
+.compat .unknown .ico { color: var(--faint); }
+.match-box { display: flex; gap: 20px; align-items: center; }
+@media (max-width: 900px) { .profile { grid-template-columns: 1fr; } .profile-media { position: static; } }
+@media (max-width: 480px) { .compat { gap: 8px; } .compat > div { padding: 14px 6px; } }

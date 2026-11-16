@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How It Works | Ampon</title>
+  <meta name="description" content="See every IF THEN rule used by Ampon's rule based pet matching and adoption readiness checks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/match.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/rules.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="page-head">
+      <span class="eyebrow">Transparent by design</span>
+      <h1>How matching works</h1>
+      <p>Ampon uses a <b>rule based system</b>: a fixed set of IF THEN rules written from shelter knowledge about pet care. There is no machine learning. The same answers always give the same result, and every recommendation lists the rules behind it.</p>
+    </div>
+
+    <div class="grid grid-3 section-sm rule-types">
+      <div class="card card-pad"><span class="ico ico-grad"><svg class="icon"><use href="/img/icons.svg#i-shield-check"></use></svg></span><h3>1. Eligibility rules</h3><p>Hard rules. If one fails, the pet is not recommended. For example, a pet that is not good with children is never recommended to a household with children.</p></div>
+      <div class="card card-pad"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-scale"></use></svg></span><h3>2. Compatibility rules</h3><p>Soft rules. Every eligible pet starts at <b id="base">50</b> points, and each rule that applies adds or subtracts points. The final score from 0 to 100 ranks the results.</p></div>
+      <div class="card card-pad"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-stethoscope"></use></svg></span><h3>3. Readiness rules</h3><p>Used by shelter staff. A rescued animal can only be listed for adoption after it passes every readiness rule.</p></div>
+    </div>
+
+    <div class="stack" id="rules"><div class="spinner" role="status" aria-label="Loading rules"></div></div>
+
+    <section class="card card-pad" style="margin-top:28px">
+      <h3>Score labels</h3>
+      <div class="labels-row" id="labels" style="margin-top:18px"></div>
+    </section>
+    <p style="margin-top:28px"><a class="btn btn-primary btn-lg" href="/match"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg>Try the match questionnaire</a></p>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

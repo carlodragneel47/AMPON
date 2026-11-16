@@ -1,0 +1,9 @@
+node_modules/
+.env
+data/
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Thesis documents (kept local, not part of the source code)
+*.docx
+*.pdf

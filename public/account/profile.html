@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile and Security | Ampon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/portal.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/profile.js"></script>
+</head>
+<body class="portal">
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Account navigation"></aside>
+    <div class="shell-overlay"></div>
+    <div class="workspace">
+      <header class="topbar" id="topbar"></header>
+      <main class="content split-even" id="content">
+        <form class="card card-pad-lg" id="profile" novalidate>
+          <div class="profile-head" id="profile-head"></div>
+          <div id="profile-msg" aria-live="polite"></div>
+          <div class="stack">
+            <div class="field"><label for="p-name">Full name</label><div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-user"></use></svg><input type="text" id="p-name" name="name" required maxlength="120" autocomplete="name"></div></div>
+            <div class="field"><label for="p-email">Email address</label><div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-mail"></use></svg><input type="email" id="p-email" disabled></div><span class="hint">Your email is used to log in and cannot be changed.</span></div>
+            <div class="field"><label for="p-phone">Mobile number</label><div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-phone"></use></svg><input type="tel" id="p-phone" name="phone" maxlength="40" autocomplete="tel" placeholder="09XX XXX XXXX"></div></div>
+            <div class="field"><label for="p-address">Home address</label><div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-map-pin"></use></svg><input type="text" id="p-address" name="address" maxlength="255" autocomplete="street-address" placeholder="Barangay, Santa Maria, Bulacan"></div></div>
+            <button class="btn btn-primary" type="submit" id="p-save"><svg class="icon"><use href="/img/icons.svg#i-check"></use></svg>Save changes</button>
+          </div>
+        </form>
+
+        <form class="card card-pad-lg" id="password" novalidate>
+          <div class="card-title" style="margin-bottom:24px"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-key-round"></use></svg></span><div><h3>Change password</h3><p class="card-sub">Use at least 6 characters that you do not use elsewhere</p></div></div>
+          <div id="pw-msg" aria-live="polite"></div>
+          <div class="stack">
+            <div class="field"><label for="pw-current">Current password</label><div class="input-wrap has-action"><svg class="icon"><use href="/img/icons.svg#i-lock"></use></svg><input type="password" id="pw-current" name="currentPassword" required autocomplete="current-password"><button type="button" class="input-action" data-toggle-pw aria-label="Show password" aria-controls="pw-current"><svg class="icon"><use href="/img/icons.svg#i-eye"></use></svg></button></div></div>
+            <div class="field"><label for="pw-new">New password</label><div class="input-wrap has-action"><svg class="icon"><use href="/img/icons.svg#i-lock"></use></svg><input type="password" id="pw-new" name="newPassword" required minlength="6" autocomplete="new-password"><button type="button" class="input-action" data-toggle-pw aria-label="Show password" aria-controls="pw-new"><svg class="icon"><use href="/img/icons.svg#i-eye"></use></svg></button></div></div>
+            <div class="field"><label for="pw-confirm">Confirm new password</label><div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-lock"></use></svg><input type="password" id="pw-confirm" name="confirm" required minlength="6" autocomplete="new-password"></div></div>
+            <button class="btn btn-soft" type="submit" id="pw-save"><svg class="icon"><use href="/img/icons.svg#i-shield-check"></use></svg>Update password</button>
+          </div>
+        </form>
+      </main>
+      <footer class="portal-foot"></footer>
+    </div>
+  </div>
+</body>
+</html>

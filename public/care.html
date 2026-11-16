@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rescue and Care | Ampon</title>
+  <meta name="description" content="Meet the rescued animals currently being treated and rehabilitated by the shelter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/pets.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/care.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="page-head">
+      <span class="eyebrow">Rescue and rehabilitation</span>
+      <h1>Animals in our care</h1>
+      <p>These rescued animals are being treated and rehabilitated by the shelter. They will be listed for adoption once they are healthy, vaccinated, dewormed and behaviourally assessed.</p>
+    </div>
+    <section class="section-sm" aria-labelledby="care-title">
+      <h2 id="care-title" class="sr-only">Currently in care</h2>
+      <div class="grid grid-auto" id="care"></div>
+    </section>
+    <section class="section-sm" id="adopted" aria-labelledby="adopted-title">
+      <div class="page-head" style="padding-top:20px"><span class="eyebrow">Happy endings</span><h2 id="adopted-title">Recently adopted</h2><p>Pets from our shelter that now have loving homes.</p></div>
+      <div class="grid grid-auto" id="adopted-list"></div>
+    </section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

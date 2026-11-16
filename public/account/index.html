@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Account | Ampon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/portal.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/account/overview.js"></script>
+</head>
+<body class="portal">
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Account navigation"></aside>
+    <div class="shell-overlay"></div>
+    <div class="workspace">
+      <header class="topbar" id="topbar"></header>
+      <main class="content stack" id="content">
+        <section class="welcome">
+          <div><h2 id="greeting">Welcome back</h2><p>Follow your applications, keep your profile up to date and discover pets that match your home.</p></div>
+          <a class="btn btn-soft" href="/match"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg>Find new matches</a>
+        </section>
+        <section class="stats" id="stats" aria-label="Summary"></section>
+        <div class="split">
+          <div class="stack">
+            <section class="card card-pad">
+              <div class="card-head"><div class="card-title"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-clipboard-list"></use></svg></span><div><h3>Latest application</h3><p class="card-sub">Where your most recent request stands</p></div></div><a class="btn btn-soft btn-sm" href="/account/applications">View all</a></div>
+              <div id="latest"><div class="spinner"></div></div>
+            </section>
+            <section class="card card-pad">
+              <div class="card-title" style="margin-bottom:14px"><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-info"></use></svg></span><h3>Adoption tips</h3></div>
+              <ul class="checks">
+                <li class="ok"><span class="mark"><svg class="icon"><use href="/img/icons.svg#i-check"></use></svg></span><span>Keep your mobile number current so the shelter can reach you.</span></li>
+                <li class="ok"><span class="mark"><svg class="icon"><use href="/img/icons.svg#i-check"></use></svg></span><span>Prepare a safe, shaded space before your pet comes home.</span></li>
+                <li class="ok"><span class="mark"><svg class="icon"><use href="/img/icons.svg#i-check"></use></svg></span><span>Plan your first vet visit within two weeks of adoption.</span></li>
+              </ul>
+            </section>
+          </div>
+          <aside class="stack">
+            <section class="card card-pad" id="prefs"></section>
+          </aside>
+        </div>
+        <section>
+          <div class="row-between" style="margin-bottom:18px"><h2 style="margin:0">Top matches for you</h2><a class="btn btn-soft btn-sm" href="/match">See all matches</a></div>
+          <div class="grid grid-3" id="top"></div>
+        </section>
+      </main>
+      <footer class="portal-foot"></footer>
+    </div>
+  </div>
+</body>
+</html>

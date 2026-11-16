@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Match | Ampon</title>
+  <meta name="description" content="Answer ten quick questions and see which rescued pets fit your home and lifestyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/match.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/match.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="page-head">
+      <span class="eyebrow">Rule based matching</span>
+      <h1>Find your match</h1>
+      <p>Tell us about your home and lifestyle. We check every available pet against <a href="/rules">predefined IF THEN rules</a> and rank the ones that fit you best.</p>
+    </div>
+    <div class="match-layout section-sm">
+      <form class="card card-pad quiz" id="quiz" aria-label="Match questionnaire">
+        <fieldset><legend><span class="q">1</span>What are you looking for?</legend><div class="chips" data-name="species" data-options="any:paw-print:Dog or cat|dog:dog:Dog|cat:cat:Cat"></div></fieldset>
+        <fieldset><legend><span class="q">2</span>Preferred size</legend><div class="chips" data-name="size" data-options="any::No preference|small::Small|medium::Medium|large::Large"></div></fieldset>
+        <fieldset><legend><span class="q">3</span>Preferred age</legend><div class="chips" data-name="age" data-options="any::No preference|young::Puppy or kitten|adult::Adult|senior::Senior"></div></fieldset>
+        <fieldset><legend><span class="q">4</span>Where do you live?</legend><div class="chips" data-name="homeType" data-options="apartment:building-2:Apartment or condo|house_no_yard:house:House without yard|house_yard:trees:House with yard"></div></fieldset>
+        <fieldset><legend><span class="q">5</span>Are there children under 12 at home?</legend><div class="chips" data-name="hasChildren" data-options="false::No|true:baby:Yes"></div></fieldset>
+        <fieldset><legend><span class="q">6</span>Do you have other pets?</legend><div class="chips" data-name="otherPets" data-options="none::None|dogs:dog:Dogs|cats:cat:Cats|both::Dogs and cats"></div></fieldset>
+        <fieldset><legend><span class="q">7</span>How active is your lifestyle?</legend><div class="chips" data-name="activity" data-options="low::Relaxed, mostly at home|moderate::Moderate, daily walks|high:zap:Very active"></div></fieldset>
+        <fieldset><legend><span class="q">8</span>How long is the pet usually alone each day?</legend><div class="chips" data-name="hoursAlone" data-options="short::Under 4 hours|medium::4 to 8 hours|long::More than 8 hours"></div></fieldset>
+        <fieldset><legend><span class="q">9</span>Your experience with pets</legend><div class="chips" data-name="experience" data-options="first::First time owner|some::Have owned pets|experienced::Very experienced"></div></fieldset>
+        <fieldset><legend><span class="q">10</span>Open to a pet with special needs?</legend><div class="chips" data-name="specialNeedsOk" data-options="false::Not right now|true:heart:Yes, I can give extra care"></div></fieldset>
+        <div class="quiz-foot">
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="quiz-submit"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg>Show my matches</button>
+          <p class="small muted" id="save-note" style="margin:12px 0 0;text-align:center"></p>
+        </div>
+      </form>
+      <section id="results" aria-live="polite" aria-label="Recommended pets"></section>
+    </div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

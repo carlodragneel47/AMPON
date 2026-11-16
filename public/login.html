@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log In | Ampon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pages/auth.css">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/js/pages/login.js"></script>
+</head>
+<body class="auth">
+  <header id="site-header" class="site-header"></header>
+  <main class="container">
+    <div class="auth-card">
+      <div class="auth-visual">
+        <img src="/img/site/friends.jpg" alt="">
+        <div>
+          <h2>Welcome back</h2>
+          <p>Pick up where you left off. Your match answers and applications are saved in your account.</p>
+          <ul>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-sparkles"></use></svg></span>See your compatibility score on every pet</li>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-clipboard-list"></use></svg></span>Follow the progress of your applications</li>
+            <li><span class="ico"><svg class="icon"><use href="/img/icons.svg#i-heart"></use></svg></span>Bring a rescued pet home</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-form">
+        <h1>Log in</h1>
+        <p class="sub">Enter your email and password to continue.</p>
+        <div id="err" aria-live="assertive"></div>
+        <form id="form" class="stack" novalidate>
+          <div class="field"><label for="email">Email address</label>
+            <div class="input-wrap"><svg class="icon"><use href="/img/icons.svg#i-mail"></use></svg><input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com"></div></div>
+          <div class="field"><label for="password">Password</label>
+            <div class="input-wrap has-action"><svg class="icon"><use href="/img/icons.svg#i-lock"></use></svg><input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Your password">
+              <button type="button" class="input-action" data-toggle-pw aria-label="Show password" aria-controls="password"><svg class="icon"><use href="/img/icons.svg#i-eye"></use></svg></button></div></div>
+          <div class="auth-row" style="justify-content:flex-end"><button type="button" class="link-btn small" id="forgot">Forgot password?</button></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit">Log in<svg class="icon"><use href="/img/icons.svg#i-arrow-right"></use></svg></button>
+        </form>
+        <p class="auth-alt">New to Ampon? <a href="/register" id="alt-link">Create an account</a></p>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
